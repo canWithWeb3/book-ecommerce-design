@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap min css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- fontawesome min css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <title>Bootstrap demo</title>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="position-relative">
+    
+    <!-- header start -->
+    <header>
+      <div class="header-up">
+        <nav class="container py-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <a href="/" class="text-decoration-none"><h1 class="h3 text-light-dark"><i class="fa-solid fa-book text-success"></i> Bookly</h1></a>
+            
+            <form id="headerSearchForm" class="input-group w-50">
+              <input type="text" class="form-control" placeholder="Search a book" id="header-search" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+              <button type="submit" class="input-group-text bg-white" id="basic-addon2"><i class="fas fa-search"></i></button>
+            </form>
+
+            <div class="">
+              <ul class="header-up-icons d-flex gap-3 text-light-dark fs-4 list-unstyled mb-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> <i onclick="toggleHeaderSearchBox()" class="fas fa-search d-md-none d-inline-block"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-heart"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                <li class="nav-item  m-0 p-0">
+                  <a class="nav-link m-0 p-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i onclick="openLoginCard()" class="fas fa-user"></i>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Login</a></li>
+                    <li><a class="dropdown-item" href="#">Register</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="header-down bg-success d-sm-block d-none">
+        <div class="d-flex justify-content-center gap-4 py-2 flex-wrap">
+          <a href="#home" class="text-decoration-none fs-5 text-white">Home</a>
+          <a href="#home" class="text-decoration-none fs-5 text-white">Featured</a>
+          <a href="#home" class="text-decoration-none fs-5 text-white">Arrivals</a>
+          <a href="#home" class="text-decoration-none fs-5 text-white">Rewiews</a>
+          <a href="#home" class="text-decoration-none fs-5 text-white">Blogs</a>
+        </div>
+      </div>
+      <!-- login card finish -->
+    </header>
+    <!-- header finish -->
+
+    <!-- slider start -->
+    <section class="header-slider position-relative">
+      <img src="image/home-bg.jpg" class="header-slider-image" alt="">
+      <div class="header-slider-content text-center">
+        <h1 class="display-5 text-success fw-bold mb-4">HAND PICKED BOOK <br> TO YOUR DOOR.</h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil <br class="d-md-inline-block d-none"> ullam at harum distinctio culpa odit!</p>
+        <a href="" class="btn btn-success rounded-pill px-5">Shop Now</a>
+      </div>
+    </section>
+    <!-- slider finish -->
+
+    <!-- slider down icons start -->
+    <section class="container my-5">
+
+      <div class="row g-3">
+        <div class="col-lg-3 col-6">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-truck-fast text-success fs-1 me-3"></i>
+            <div class="d-flex flex-column">
+              <h5 class="h3 text-light-gray mb-0">Free Shipping</h5>
+              <span style="font-size: 17.5px;" class="text-gray">Order Over $100</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-6">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-lock text-success fs-1 me-3"></i>
+            <div class="d-flex flex-column">
+              <h5 class="h3 text-light-gray mb-0">Secure Payment</h5>
+              <span style="font-size: 17.5px;" class="text-gray">100 Secure Payment</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-6">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-rotate-right text-success fs-1 me-3"></i>
+            <div class="d-flex flex-column">
+              <h5 class="h3 text-light-gray mb-0">Easy Returns</h5>
+              <span style="font-size: 17.5px;" class="text-gray">10 Day Returns</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-6">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-headset text-success fs-1 me-3"></i>
+            <div class="d-flex flex-column">
+              <h5 class="h3 text-light-gray mb-0">24/7 Support</h5>
+              <span style="font-size: 17.5px;" class="text-gray">Call Us Anytime</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </section>
+    <!-- slider down icons start -->
+
+    <!-- featured books start -->
+    <section class="container my-5">
+      <h1 class="h1 text-center text-decoration-underline mb-4">Featured Books</h1>
+
+      <div class="row">
+
+        <div class="col-lg-3">
+          <div class="card border-0">
+            <img src="image/darknet.jpg" alt="" class="img-fluid">
+            <div class="card-body">
+              <h1 class="h4">Book 1</h1>
+              <div class="d-flex flex-wrap align-items-center justify-content-start gap-3 mb-3">
+                <span class="fs-4 fw-bold">$15.99</span>
+                <span class="fs-5 text-decoration-line-through text-gray">$20.99</span>
+              </div>
+              <button class="btn btn-outline-success">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- featured books finish -->
+
+    <!-- subscribe form start -->
+    <section class="home-subscribe my-5">
+      <div class="d-flex align-items-center justify-content-center h-100">
+        <div class="text-center">
+          <h1 class="h2 mb-4">Subscribe For Latest Updates</h1>
+          <input type="text" class="form-control my-3 border-success" placeholder="Enter your email">
+          <button class="btn btn-success">Subscribe</button>
+        </div>
+      </div>
+    </section>
+    <!-- subscribe form finish -->
+
+    <!-- about start -->
+    <section class="container my-5">
+      <div class="row d-flex align-items-center g-3 text-lg-start text-center">
+        <div class="col-lg-6">
+          <img src="image/about-img.jpg" alt="" class="img-fluid rounded">
+        </div>
+
+        <div class="col-lg-6 h-100">
+            <h1 class="h1 mb-3">ABOUT US</h1>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora incidunt autem doloribus reiciendis inventore natus voluptatibus laboriosam quod.</p>
+            <button class="btn btn-secondary">Read More</button>
+        </div>
+      </div>
+    </section>
+    <!-- about finish -->
+
+    <section class="comments container my-5">
+      <h1 class="h1 text-center text-decoration-underline mb-4">Client's Reviews</h1>
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <img width="80" src="image/pic-1.png" alt="" class="img-fluid rounded-circle mb-3">
+              <h1 class="h4">John Deo</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At quis perferendis impedit eos! Distinctio assumenda debitis modi? Nostrum labore magni rem amet!</p>
+              <div class="d-flex gap-2 justify-content-center text-success">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <img width="80" src="image/pic-2.png" alt="" class="img-fluid rounded-circle mb-3">
+              <h1 class="h4">John Deo</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At quis perferendis impedit eos! Distinctio assumenda debitis modi? Nostrum labore magni rem amet!</p>
+              <div class="d-flex gap-2 justify-content-center text-success">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <img width="80" src="image/pic-3.png" alt="" class="img-fluid rounded-circle mb-3">
+              <h1 class="h4">John Deo</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At quis perferendis impedit eos! Distinctio assumenda debitis modi? Nostrum labore magni rem amet!</p>
+              <div class="d-flex gap-2 justify-content-center text-success">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="home-blogs container my-5">
+      <h1 class="h1 text-center text-decoration-underline mb-4">Our Blogs</h1>
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
+          <div class="card">
+            <img height="210" src="image/blog-1.jpg" alt="" class="card-img-top">
+            <div class="card-body">
+              <h1 class="h4">Blog Title Goes Here</h1>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet natus obcaecati et?</p>
+              <button class="btn btn-success">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
+          <div class="card">
+            <img height="210" src="image/blog-2.jpeg" alt="" class="card-img-top">
+            <div class="card-body">
+              <h1 class="h4">Blog Title Goes Here</h1>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet natus obcaecati et?</p>
+              <button class="btn btn-success">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
+          <div class="card">
+            <img height="210" src="image/blog-3.png" alt="" class="card-img-top">
+            <div class="card-body">
+              <h1 class="h4">Blog Title Goes Here</h1>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet natus obcaecati et?</p>
+              <button class="btn btn-success">Read More</button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- footer start -->
+    <footer class="container">
+      <div class="row text-lg-start text-center mb-3">
+
+        <div class="col-lg-3 col-md-6">
+          <h1 class="h3 mb-3">Our Locations</h1>
+
+          <ul class="list-unstyled">
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-location-dot text-success"></i> <span>India</span></a></li>
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-location-dot text-success"></i> <span>USA</span></a></li>
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-location-dot text-success"></i> <span>Russia</span></a></li>
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-location-dot text-success"></i> <span>France</span></a></li>
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-location-dot text-success"></i> <span>Japan</span></a></li>
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-location-dot text-success"></i> <span>Africa</span></a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h1 class="h3 mb-3">Quick Links</h1>
+
+          <ul class="list-unstyled">
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-arrow-right"></i> <span>Home</span></a></li>
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-arrow-right"></i> <span>Featured</span></a></li>
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-arrow-right"></i> <span>Arrivals</span></a></li>
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-arrow-right"></i> <span>Reviews</span></a></li>
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-arrow-right"></i> <span>Blogs</span></a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h1 class="h3 mb-3">Extra Links</h1>
+
+          <ul class="list-unstyled">
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-arrow-right"></i> <span>Account Info</span></a></li>
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-arrow-right"></i> <span>Ordered Items</span></a></li>
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-arrow-right"></i> <span>Privacy Policy</span></a></li>
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-arrow-right"></i> <span>Payment Method</span></a></li>
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-arrow-right"></i> <span>Our Services</span></a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h1 class="h3 mb-3">Contact Info</h1>
+
+          <ul class="list-unstyled">
+            <li style="font-size: 18px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-phone-flip"></i> <span>0 532 488 37 72</span></a></li>
+            <li style="font-size: 16px;"><a href="" class="text-decoration-none text-gray"><i class="fa-solid fa-envelope"></i> <span>canoguzorhan066@gmail.com</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="d-flex gap-3 justify-content-center flex-wrap mb-5">
+        <button style="width:40px; height:40px;" class="btn btn-success rounded-circle d-flex align-items-center justify-content-center"><i class="fa-brands fa-facebook-f fs-5"></i></button>
+        <button style="width:40px; height:40px;" class="btn btn-success rounded-circle d-flex align-items-center justify-content-center"><i class="fa-brands fa-twitter fs-5"></i></button>
+        <button style="width:40px; height:40px;" class="btn btn-success rounded-circle d-flex align-items-center justify-content-center"><i class="fa-brands fa-instagram fs-5"></i></button>
+        <button style="width:40px; height:40px;" class="btn btn-success rounded-circle d-flex align-items-center justify-content-center"><i class="fa-brands fa-linkedin fs-5"></i></button>
+        <button style="width:40px; height:40px;" class="btn btn-success rounded-circle d-flex align-items-center justify-content-center"><i class="fa-brands fa-pinterest-p fs-5"></i></button>
+      </div>
+
+    </footer>
+    <!-- footer finish -->
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- custom js -->
+    <script src="script.js"></script>
+  </body>
+</html>
